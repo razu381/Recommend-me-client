@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { AuthContext } from "../../Auth/AuthProvider";
 import axios from "axios";
 import { useLoaderData, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function UpdateQuery() {
   let { user } = useContext(AuthContext);
@@ -36,7 +37,10 @@ function UpdateQuery() {
       .put(`http://localhost:3000/update-query/${id}`, formData, {
         withCredentials: true,
       })
-      .then((res) => console.log(res.data))
+      .then((res) => {
+        console.log(res.data);
+        toast.success("Query updated successfully");
+      })
       .catch((err) => console.log(err));
   }
   return (

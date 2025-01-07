@@ -27,7 +27,7 @@ function Slider() {
         <div className="hero bg-california-700 text-white min-h-screen">
           <div className="hero-content text-white text-center">
             <div className="max-w-full px-10 lg:max-w-3xl">
-              <h1 className="text-5xl font-bold">
+              <h1 className="text-2xl md:text-5xl font-bold">
                 Welcome to Your Personalized Product Guide
               </h1>
               <p className="py-6">
@@ -50,7 +50,7 @@ function Slider() {
         <div className="hero bg-california-700 min-h-screen">
           <div className="hero-content text-white text-center">
             <div className="max-w-full px-10 lg:max-w-3xl">
-              <h2 className="text-5xl font-bold">
+              <h2 className="text-2xl md:text-5xl font-bold">
                 Engage with a Vibrant Community
               </h2>
               <p className="py-6">
@@ -70,9 +70,9 @@ function Slider() {
       </SwiperSlide>
       <SwiperSlide>
         <div className="hero bg-california-700  min-h-screen">
-          <div className="hero-content text-white text-center">
+          <div className="w-full hero-content text-white text-center">
             <div className="max-w-full px-10 lg:max-w-3xl">
-              <h2 className="text-5xl font-bold">
+              <h2 className="text-2xl md:text-5xl font-bold">
                 Share and Refine Recommendations
               </h2>
               <p className="py-6">

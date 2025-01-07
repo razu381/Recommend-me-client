@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../Auth/AuthProvider";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 function AddQuery() {
   let { user } = useContext(AuthContext);
@@ -27,7 +28,10 @@ function AddQuery() {
         { formData },
         { withCredentials: true }
       )
-      .then((res) => res.data)
+      .then((res) => {
+        console.log(res.data);
+        toast.success("Query added sucessfully");
+      })
       .catch((err) => console.log(err));
   }
   return (
