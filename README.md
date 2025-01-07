@@ -1,8 +1,12 @@
-#Prjoect: Recommend Me
-#Live site : https://recommendme-35a11.web.app/
-#Description:
+# Prjoect: Recommend Me
+
+# Live site : https://recommendme-35a11.web.app/
+
+# Description:
+
 This a recommendation website where users asks for recommendations and other users recommend them alternative product recommendations
-#key features:
+
+# key features:
 
 - Queries
 - Recommendations from others
