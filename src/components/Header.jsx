@@ -26,11 +26,13 @@ function Header() {
       </li>
 
       <li>
-        <Link to="/my-queries">My Queries</Link>
-      </li>
-      <li>
         <Link to="/recommendations-for-me">Recommendations For Me</Link>
       </li>
+
+      <li>
+        <Link to="/my-queries">My Queries</Link>
+      </li>
+
       <li>
         <Link to="/my-recommendations">My recommendations</Link>
       </li>

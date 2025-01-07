@@ -13,6 +13,7 @@ import UpdateQuery from "../Pages/Update Query/UpdateQuery";
 import PrivateRoute from "./PrivateRoute";
 import PrivateRouter from "./PrivateRoute";
 import Query from "../Pages/Queries/Query";
+import NotFound from "../components/NotFound";
 
 const routersystem = createBrowserRouter([
   {
@@ -82,6 +83,10 @@ const routersystem = createBrowserRouter([
         ),
       },
     ],
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
 
