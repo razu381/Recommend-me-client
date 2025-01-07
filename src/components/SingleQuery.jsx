@@ -22,9 +22,9 @@ function SingleQuery({ query }) {
           <img src={productImageURL} alt={queryTitle} className="rounded-xl" />
         </figure>
         <div className="card-body items-center text-center">
+          <h2 className="card-title">{queryTitle}</h2>
           <p>Name: {productName}</p>
           <p>Posted on: {dateFormatted}</p>
-          <h2 className="card-title">{queryTitle}</h2>
         </div>
       </div>
     </Link>
