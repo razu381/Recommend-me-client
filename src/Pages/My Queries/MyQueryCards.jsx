@@ -35,12 +35,6 @@ function MyQueryCards() {
     );
   }
 
-  function handleLayout(e) {
-    e.preventDefault();
-    let col = e.target.col;
-    console.log(col);
-  }
-
   return (
     <div className="lg:max-w-6xl mx-5 lg:mx-auto" id="my-queries">
       <div className="flex justify-between">

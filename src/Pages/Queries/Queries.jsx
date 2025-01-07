@@ -4,6 +4,7 @@ import SingleQueryPage from "./SingleQueryPage";
 
 function Queries() {
   let [queries, setQueries] = useState([]);
+  let [column, setColumn] = useState(3);
 
   useEffect(() => {
     axios
@@ -14,8 +15,28 @@ function Queries() {
 
   return (
     <div className="lg:max-w-6xl mx-5 lg:mx-auto mb-20">
-      <h2 className="text-center font-bold text-3xl my-10">Queries</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="flex justify-between items-center">
+        <h2 className="text-center font-bold text-3xl my-10">Queries</h2>
+        <div className="hidden md:flex gap-3 items-center justify-center">
+          <h4 className="font-bold">Change layout</h4>
+          <form>
+            <select
+              value={column}
+              onChange={(e) => setColumn(e.target.value)}
+              name="col"
+              className="select select-bordered w-full max-w-xs"
+            >
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </form>
+        </div>
+      </div>
+
+      <div
+        className={`grid grid-cols-1 md:grid-cols-${column} lg:grid-cols-${column} gap-4`}
+      >
         {queries.map((query) => (
           <SingleQueryPage query={query} key={query._id} />
         ))}

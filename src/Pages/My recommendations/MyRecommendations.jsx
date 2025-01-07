@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Auth/AuthProvider";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 function MyRecommendations() {
   let { user } = useContext(AuthContext);
@@ -16,13 +17,26 @@ function MyRecommendations() {
     let remainingData = recommendations.filter(
       (recommendation) => recommendation._id != id
     );
-    axios
-      .delete(`http://localhost:3000/recommendations/${id}`)
-      .then((res) => {
-        console.log(res.data);
-        setRecommendations(remainingData);
-      })
-      .catch((err) => console.log(err));
+
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You will not be able to recover this query!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Yes, delete it!",
+      cancelButtonText: "No, keep it",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios
+          .delete(`http://localhost:3000/recommendations/${id}`)
+          .then((res) => {
+            console.log(res.data);
+            setRecommendations(remainingData);
+          })
+          .catch((err) => console.log(err));
+        Swal.fire("Deleted!");
+      }
+    });
   }
 
   if (recommendations.length === 0) {
