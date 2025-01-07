@@ -23,12 +23,12 @@ function MyQueries() {
                 Add Query
               </Link>
 
-              <Link
-                to="#my-queries"
+              <a
+                href="#my-queries"
                 className="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-blue-600 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"
               >
                 see your queries
-              </Link>
+              </a>
             </div>
           </div>
         </div>

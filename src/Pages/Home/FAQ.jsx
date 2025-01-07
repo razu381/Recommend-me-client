@@ -3,7 +3,9 @@ import React from "react";
 function FAQ() {
   return (
     <div>
-      <h2 className="font-bold text-3xl text-center py-10">Recent Queries</h2>
+      <h2 className="font-bold text-3xl text-center py-10">
+        Frquently asked questions
+      </h2>
 
       <div className="space-y-4">
         <details

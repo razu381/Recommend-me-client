@@ -1,9 +1,16 @@
-# React + Vite
+#Prjoect: Recommend Me
+#Live site : https://recommendme-35a11.web.app/
+#Description:
+This a recommendation website where users asks for recommendations and other users recommend them alternative product recommendations
+#key features:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-"# Recommend-me-client" 
+- Queries
+- Recommendations from others
+- Registration and login
+- User based query and recommendations
+  #Npm packages used:
+- Swiper slider
+- React toast
+- Sweet alert 2
+- Firebase
+- React router

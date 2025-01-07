@@ -19,7 +19,7 @@ function MyQueryCards() {
   }, [user]);
 
   return (
-    <div className="lg:max-w-6xl mx-5 lg:mx-auto">
+    <div className="lg:max-w-6xl mx-5 lg:mx-auto" id="my-queries">
       <h2 className="font-bold text-3xl text-center py-10 lg:py-20">
         My Queries
       </h2>
