@@ -2,20 +2,33 @@ import React from "react";
 import SingleQuery from "../../components/SingleQuery";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 function SingleMyQueryCard({ query, myqueries, setMyqueries }) {
   let { _id, productImageURL, queryTitle, productBrand } = query;
 
   function handleDelete(id) {
     let remainingData = myqueries.filter((query) => query._id != id);
-
-    axios
-      .delete(`http://localhost:3000/my-queries/${id}`)
-      .then((res) => {
-        console.log(res.data);
-        setMyqueries(remainingData);
-      })
-      .catch((err) => console.log(err));
+    Swal.fire("delete was requested");
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You will not be able to recover this query!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Yes, delete it!",
+      cancelButtonText: "No, keep it",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios
+          .delete(`http://localhost:3000/my-queries/${id}`)
+          .then((res) => {
+            console.log(res.data);
+            setMyqueries(remainingData);
+          })
+          .catch((err) => console.log(err));
+        Swal.fire("Deleted!");
+      }
+    });
   }
   return (
     <div className="bg-california-300 rounded-xl">

@@ -22,7 +22,7 @@ function UpdateQuery() {
     query.email = email;
     query.photoURL = photoURL;
     query.displayName = displayName;
-    query.date = date;
+    query.date = Date.now();
     console.log("querydata", query);
   }
   function handleRecAdd(e) {
@@ -87,6 +87,7 @@ function UpdateQuery() {
           placeholder="Boycotting Reason in Detail"
           className="textarea textarea-bordered textarea-sm w-full max-w-xs lg:max-w-lg"
         ></textarea>
+
         <input
           type="submit"
           value="Submit"
