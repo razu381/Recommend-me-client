@@ -45,7 +45,7 @@ function Header() {
   }
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-california-50">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -71,7 +71,9 @@ function Header() {
             {user ? signedMenu : unsignedMenu}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl lg:text-2xl italic">Recommend Me</a>
+        <a className="btn text-california-600 btn-ghost text-xl lg:text-2xl italic">
+          Recommend Me
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
