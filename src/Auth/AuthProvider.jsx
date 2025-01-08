@@ -47,7 +47,7 @@ function AuthProvider({ children }) {
     let unsubscribe = onAuthStateChanged(auth, (CurrUser) => {
       setUser(CurrUser);
 
-      if (CurrUser.email) {
+      if (CurrUser?.email) {
         axios
           .post(
             "http://localhost:3000/jwt",

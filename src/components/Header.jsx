@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Auth/AuthProvider";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 function Header() {
   let { user, LogOut } = useContext(AuthContext);
@@ -40,7 +41,19 @@ function Header() {
 
   function handleLogOut() {
     LogOut()
-      .then(() => toast.success("Logged out successfully"))
+      .then(() => {
+        toast.success("Logged out successfully");
+        axios
+          .post(
+            "http://localhost:3000/deleteCookieOnLogOut",
+            {},
+            {
+              withCredentials: true,
+            }
+          )
+          .then((res) => console.log(res.data))
+          .catch((err) => console.log(err));
+      })
       .catch((err) => console.log(err));
   }
 
