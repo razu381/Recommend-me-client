@@ -11,14 +11,21 @@ function RecentQueries() {
       .then((res) => setQueries(res.data))
       .catch((err) => console.log(err));
   }, []);
+
   return (
     <div className="py-20">
       <h2 className="font-bold text-3xl text-center py-10">Recent Queries</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-        {queries.map((query) => {
-          return <SingleQuery key={query._id} query={query} />;
-        })}
-      </div>
+      {queries.length === 0 ? (
+        <h2 className="font-bold text-red-600 text-center py-5">
+          No queries available
+        </h2>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {queries.map((query) => {
+            return <SingleQuery key={query._id} query={query} />;
+          })}
+        </div>
+      )}
     </div>
   );
 }
