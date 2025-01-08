@@ -34,9 +34,13 @@ function UpdateQuery() {
     console.log(formData);
 
     axios
-      .put(`http://localhost:3000/update-query/${id}`, formData, {
-        withCredentials: true,
-      })
+      .put(
+        `https://recommend-me-server.vercel.app/update-query/${id}`,
+        formData,
+        {
+          withCredentials: true,
+        }
+      )
       .then((res) => {
         console.log(res.data);
         toast.success("Query updated successfully");

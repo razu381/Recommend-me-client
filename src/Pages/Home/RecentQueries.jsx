@@ -7,7 +7,7 @@ function RecentQueries() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/queries?limit=6")
+      .get("https://recommend-me-server.vercel.app/queries?limit=6")
       .then((res) => setQueries(res.data))
       .catch((err) => console.log(err));
   }, []);

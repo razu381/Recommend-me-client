@@ -50,7 +50,7 @@ function AuthProvider({ children }) {
       if (CurrUser?.email) {
         axios
           .post(
-            "http://localhost:3000/jwt",
+            "https://recommend-me-server.vercel.app/jwt",
             { email: CurrUser.email },
             {
               withCredentials: true,

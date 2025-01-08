@@ -72,7 +72,7 @@ const routersystem = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/queries/${params.id}`),
+          fetch(`https://recommend-me-server.vercel.app/queries/${params.id}`),
       },
       {
         path: "/recommendations-for-me",

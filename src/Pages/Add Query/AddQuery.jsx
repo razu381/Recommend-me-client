@@ -24,7 +24,7 @@ function AddQuery() {
 
     axios
       .post(
-        "http://localhost:3000/queries",
+        "https://recommend-me-server.vercel.app/queries",
         { formData },
         { withCredentials: true }
       )

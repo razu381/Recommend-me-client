@@ -24,7 +24,7 @@ function Query() {
   //get query data
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/queries/${id}`)
+      .get(`https://recommend-me-server.vercel.app/queries/${id}`)
       .then((res) => setQueryData(res.data))
       .catch((err) => console.log(err));
   }, []);
@@ -32,7 +32,7 @@ function Query() {
   //get recommendations for this product
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/recommendations/${id}`)
+      .get(`https://recommend-me-server.vercel.app/recommendations/${id}`)
       .then((res) => setRecommendations(res.data))
       .catch((err) => console.log(err));
   }, []);
@@ -55,7 +55,10 @@ function Query() {
     addAdditionalData(recommendation);
 
     axios
-      .post("http://localhost:3000/recommendations", recommendation)
+      .post(
+        "https://recommend-me-server.vercel.app/recommendations",
+        recommendation
+      )
       .then((res) => {
         toast.success("Recommendation added");
         setRecommendations([...recommendations, recommendation]);

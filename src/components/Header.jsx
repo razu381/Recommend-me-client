@@ -45,7 +45,7 @@ function Header() {
         toast.success("Logged out successfully");
         axios
           .post(
-            "http://localhost:3000/deleteCookieOnLogOut",
+            "https://recommend-me-server.vercel.app/deleteCookieOnLogOut",
             {},
             {
               withCredentials: true,

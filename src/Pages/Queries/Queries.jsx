@@ -8,7 +8,7 @@ function Queries() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/queries")
+      .get("https://recommend-me-server.vercel.app/queries")
       .then((res) => setQueries(res.data))
       .catch((err) => console.log(err));
   }, []);
@@ -18,7 +18,7 @@ function Queries() {
     let query = e.target.search.value;
     console.log(query);
     axios
-      .get(`http://localhost:3000/search?q=${query}`)
+      .get(`https://recommend-me-server.vercel.app/search?q=${query}`)
       .then((res) => setQueries(res.data))
       .catch((err) => console.log(err));
   }
@@ -33,9 +33,9 @@ function Queries() {
 
   return (
     <div className="lg:max-w-6xl mx-5 lg:mx-auto mb-20">
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col md:flex-row justify-between items-center">
         <h2 className="text-center font-bold text-3xl my-10">Queries</h2>
-        <div>
+        <div className="pb-2">
           <form onSubmit={handleSearch}>
             <input
               type="text"

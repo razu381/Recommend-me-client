@@ -14,7 +14,7 @@ function MyQueryCards() {
   useEffect(() => {
     axios
       .post(
-        "http://localhost:3000/my-queries",
+        "https://recommend-me-server.vercel.app/my-queries",
         { email: user?.email },
         { withCredentials: true }
       )

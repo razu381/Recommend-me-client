@@ -9,7 +9,6 @@ function SingleMyQueryCard({ query, myqueries, setMyqueries }) {
 
   function handleDelete(id) {
     let remainingData = myqueries.filter((query) => query._id != id);
-    Swal.fire("delete was requested");
     Swal.fire({
       title: "Are you sure?",
       text: "You will not be able to recover this query!",
@@ -20,7 +19,7 @@ function SingleMyQueryCard({ query, myqueries, setMyqueries }) {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:3000/my-queries/${id}`)
+          .delete(`https://recommend-me-server.vercel.app/my-queries/${id}`)
           .then((res) => {
             console.log(res.data);
             setMyqueries(remainingData);

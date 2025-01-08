@@ -8,7 +8,9 @@ function RecommendationsForMe() {
   let [recommendations, setRecommendations] = useState([]);
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/recommended-for-me/${user.email}`)
+      .get(
+        `https://recommend-me-server.vercel.app/recommended-for-me/${user.email}`
+      )
       .then((res) => setRecommendations(res.data))
       .then((err) => console.log(err));
   }, []);
