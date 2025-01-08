@@ -5,7 +5,6 @@ import { toast } from "react-toastify";
 
 function Header() {
   let { user, LogOut } = useContext(AuthContext);
-  console.log(user?.email);
   let unsignedMenu = (
     <>
       <li>

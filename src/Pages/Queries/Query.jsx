@@ -128,7 +128,10 @@ function Query() {
             </h2>
             <div>
               {recommendations.map((recommendation) => (
-                <RecommendationCardBasic recommendation={recommendation} />
+                <RecommendationCardBasic
+                  recommendation={recommendation}
+                  key={recommendation._id}
+                />
               ))}
             </div>
           </div>

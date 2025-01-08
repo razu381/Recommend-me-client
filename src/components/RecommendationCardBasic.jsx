@@ -1,8 +1,8 @@
 import React from "react";
 
 function RecommendationCardBasic({ recommendation }) {
-  console.log(recommendation);
   let { productImage, title, reason, date, recommenderName } = recommendation;
+
   return (
     <article className="rounded-xl border-2 border-gray-100 bg-white mb-5">
       <div className="flex items-start gap-4 p-4 sm:p-6 lg:p-4">

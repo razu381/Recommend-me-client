@@ -13,10 +13,34 @@ function Queries() {
       .catch((err) => console.log(err));
   }, []);
 
+  function handleSearch(e) {
+    e.preventDefault();
+    let query = e.target.search.value;
+    console.log(query);
+    axios
+      .get(`http://localhost:3000/search?q=${query}`)
+      .then((res) => setQueries(res.data))
+      .catch((err) => console.log(err));
+  }
+
   return (
     <div className="lg:max-w-6xl mx-5 lg:mx-auto mb-20">
       <div className="flex justify-between items-center">
         <h2 className="text-center font-bold text-3xl my-10">Queries</h2>
+        <div>
+          <form onSubmit={handleSearch}>
+            <input
+              type="text"
+              name="search"
+              className="border border-gray-300 rounded-lg py-2 "
+            />
+            <input
+              type="submit"
+              value="Search"
+              className="bg-california-500 py-2 px-5 rounded-lg ml-2"
+            />
+          </form>
+        </div>
         <div className="hidden md:flex gap-3 items-center justify-center">
           <h4 className="font-bold">Change layout</h4>
           <form>
