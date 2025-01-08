@@ -23,6 +23,14 @@ function Queries() {
       .catch((err) => console.log(err));
   }
 
+  if (queries.length === 0) {
+    return (
+      <h2 className="font-bold text-red-600 text-center py-5">
+        No queries available{" "}
+      </h2>
+    );
+  }
+
   return (
     <div className="lg:max-w-6xl mx-5 lg:mx-auto mb-20">
       <div className="flex justify-between items-center">
