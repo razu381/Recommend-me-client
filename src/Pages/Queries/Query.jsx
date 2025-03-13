@@ -69,7 +69,7 @@ function Query() {
     <section>
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:items-center md:gap-8">
-          <div>
+          <div className="">
             <div className="max-w-lg md:max-w-none">
               <h2 className="text-2xl font-semibold text-gray-900 sm:text-3xl">
                 {queryTitle}
@@ -85,8 +85,12 @@ function Query() {
             </div>
           </div>
 
-          <div>
-            <img src={productImageURL} className="rounded-xl" alt="" />
+          <div className="">
+            <img
+              src={productImageURL}
+              className="rounded-xl lg:max-w-xl ml-auto"
+              alt=""
+            />
           </div>
         </div>
 
@@ -105,23 +109,23 @@ function Query() {
                 type="text"
                 name="title"
                 placeholder="Recommendation Title"
-                className="input input-bordered input-accent w-full"
+                className="input input-bordered border-california-200 border-2 input-accent w-full"
               />
               <input
                 type="text"
                 name="productImage"
                 placeholder="Recommended Product Image"
-                className="input input-bordered input-accent w-full"
+                className="input input-bordered border-california-200 border-2 input-accent w-full"
               />
               <textarea
                 name="reason"
                 placeholder="Recommendation reason"
-                className="input input-bordered input-accent row w-full h-24"
+                className="input input-bordered border-california-200 border-2 input-accent row w-full h-24"
               ></textarea>
               <input
                 type="submit"
                 value="Add recommendation"
-                className="bg-california-600 w-full py-2"
+                className="bg-california-600 rounded-lg w-full py-2 text-white"
               />
             </form>
           </div>

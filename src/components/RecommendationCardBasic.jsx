@@ -4,7 +4,7 @@ function RecommendationCardBasic({ recommendation }) {
   let { productImage, title, reason, date, recommenderName } = recommendation;
 
   return (
-    <article className="rounded-xl border-2 border-gray-100 bg-white mb-5">
+    <article className="rounded-xl border-2 border-california-200 mb-5">
       <div className="flex items-start gap-4 p-4 sm:p-6 lg:p-4">
         <img src={productImage} className="size-24 rounded-lg object-cover" />
         <div>
