@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import MyQueryCards from "./MyQueryCards";
 
 function MyQueries() {
+  
   return (
     <div>
       <section className="bg-black text-white">

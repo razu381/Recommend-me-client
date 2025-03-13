@@ -17,7 +17,7 @@ function SingleQuery({ query }) {
 
   return (
     <Link to={`/queries/${_id}`}>
-      <div className="card bg-california-300 ">
+      <div className="card bg-light-bg-1 flex flex-col h-full">
         <figure className="px-10 pt-10">
           <img src={productImageURL} alt={queryTitle} className="rounded-xl" />
         </figure>

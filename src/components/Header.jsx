@@ -9,32 +9,49 @@ function Header() {
   let unsignedMenu = (
     <>
       <li>
-        <Link to="/">Home</Link>
+        <Link to="/" className="text-white focus:text-white">
+          Home
+        </Link>
       </li>
       <li>
-        <Link to="/queries">Queries</Link>
+        <Link to="/queries" className="text-white focus:text-white">
+          Queries
+        </Link>
       </li>
     </>
   );
   let signedMenu = (
     <>
       <li>
-        <Link to="/">Home</Link>
+        <Link to="/" className="text-white focus:text-white">
+          Home
+        </Link>
       </li>
       <li>
-        <Link to="/queries">Queries</Link>
-      </li>
-
-      <li>
-        <Link to="/recommendations-for-me">Recommendations For Me</Link>
-      </li>
-
-      <li>
-        <Link to="/my-queries">My Queries</Link>
+        <Link to="/queries" className="text-white focus:text-white">
+          Queries
+        </Link>
       </li>
 
       <li>
-        <Link to="/my-recommendations">My recommendations</Link>
+        <Link
+          to="/recommendations-for-me"
+          className="text-white focus:text-white"
+        >
+          Recommendations For Me
+        </Link>
+      </li>
+
+      <li>
+        <Link to="/my-queries" className="text-white focus:text-white">
+          My Queries
+        </Link>
+      </li>
+
+      <li>
+        <Link to="/my-recommendations" className="text-white focus:text-white">
+          My recommendations
+        </Link>
       </li>
     </>
   );
@@ -58,7 +75,7 @@ function Header() {
   }
 
   return (
-    <div className="navbar bg-california-50">
+    <div className="navbar bg-dark-bg">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -79,17 +96,17 @@ function Header() {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-white"
           >
             {user ? signedMenu : unsignedMenu}
           </ul>
         </div>
-        <a className="btn text-california-600 btn-ghost text-xl lg:text-2xl italic">
+        <a className="btn text-california-50 btn-ghost text-xl lg:text-2xl italic">
           Recommend Me
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 text-white">
           {user ? signedMenu : unsignedMenu}
         </ul>
       </div>
@@ -103,7 +120,7 @@ function Header() {
             />
             <Link
               onClick={handleLogOut}
-              className="btn bg-california-500 hover:bg-california-800"
+              className="btn bg-california-600 hover:bg-california-800 text-white border-none"
             >
               LogOut
             </Link>
@@ -111,7 +128,7 @@ function Header() {
         ) : (
           <Link
             to="/login"
-            className="btn bg-california-500 hover:bg-california-800"
+            className="btn bg-california-600 hover:bg-california-800 border-none text-white"
           >
             Login
           </Link>

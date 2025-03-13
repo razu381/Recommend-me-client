@@ -24,7 +24,7 @@ function Slider() {
       // onSlideChange={() => console.log("slide change")}
     >
       <SwiperSlide>
-        <div className="hero bg-california-700 text-white min-h-screen">
+        <div className="hero bg-[url('https://i.ibb.co.com/GQCZmtY2/6706368-3408105.jpg')] bg-cover bg-center bg-no-repeat text-white min-h-screen">
           <div className="hero-content text-white text-center">
             <div className="max-w-full px-10 lg:max-w-3xl">
               <h1 className="text-2xl md:text-5xl font-bold">
@@ -37,7 +37,7 @@ function Slider() {
                 your decisions. Explore, inquire, and recommend with ease.
               </p>
               <Link
-                className="btn bg-california-500 hover:bg-california-800 text-white border-none "
+                className="btn bg-california-600 hover:bg-california-800 text-white border-none "
                 to="/queries"
               >
                 Get Started
@@ -47,7 +47,7 @@ function Slider() {
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="hero bg-california-700 min-h-screen">
+        <div className="hero bg-[url('https://i.ibb.co.com/dsXmqvfV/12893196-5084287.jpg')] bg-cover bg-center bg-no-repeat min-h-screen">
           <div className="hero-content text-white text-center">
             <div className="max-w-full px-10 lg:max-w-3xl">
               <h2 className="text-2xl md:text-5xl font-bold">
@@ -69,7 +69,7 @@ function Slider() {
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="hero bg-california-700  min-h-screen">
+        <div className="hero bg-[url('https://i.ibb.co.com/LznbjGfW/44420737-9019796.jpg')] bg-cover bg-center bg-no-repeat  min-h-screen">
           <div className="w-full hero-content text-white text-center">
             <div className="max-w-full px-10 lg:max-w-3xl">
               <h2 className="text-2xl md:text-5xl font-bold">

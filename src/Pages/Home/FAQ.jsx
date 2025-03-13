@@ -12,7 +12,7 @@ function FAQ() {
           className="group [&_summary::-webkit-details-marker]:hidden"
           open
         >
-          <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+          <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-light-bg-1 p-5 text-gray-900">
             <h2 className="font-medium">1. What is this platform about?</h2>
 
             <svg
@@ -40,7 +40,7 @@ function FAQ() {
         </details>
 
         <details className="group [&_summary::-webkit-details-marker]:hidden">
-          <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+          <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-light-bg-1 p-4 text-gray-900">
             <h2 className="font-medium">
               2. How do I add a query about a product?
             </h2>
@@ -70,7 +70,7 @@ function FAQ() {
         </details>
 
         <details className="group [&_summary::-webkit-details-marker]:hidden">
-          <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+          <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-light-bg-1 p-4 text-gray-900">
             <h2 className="font-medium">
               3. Can I modify or delete my queries and recommendations?
             </h2>
@@ -98,7 +98,7 @@ function FAQ() {
         </details>
 
         <details className="group [&_summary::-webkit-details-marker]:hidden">
-          <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+          <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-light-bg-1 p-4 text-gray-900">
             <h2 className="font-medium">
               4. Do I need to create an account to participate?
             </h2>
@@ -126,7 +126,7 @@ function FAQ() {
           </p>
         </details>
         <details className="group [&_summary::-webkit-details-marker]:hidden">
-          <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+          <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-light-bg-1 p-4 text-gray-900">
             <h2 className="font-medium">
               5. How are recommendations ranked or displayed?
             </h2>

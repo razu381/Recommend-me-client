@@ -45,7 +45,7 @@ function Queries() {
             <input
               type="submit"
               value="Search"
-              className="bg-california-500 py-2 px-5 rounded-lg ml-2"
+              className="bg-california-600 text-white py-2 px-5 rounded-lg ml-2"
             />
           </form>
         </div>

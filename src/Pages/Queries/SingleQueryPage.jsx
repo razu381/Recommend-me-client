@@ -8,7 +8,7 @@ function SingleQueryPage({ query }) {
   let { _id, recommendationCount } = query;
 
   return (
-    <div className="bg-california-300 rounded-2xl flex flex-col items-center">
+    <div className="bg-light-bg-1 rounded-2xl flex flex-col items-center">
       <SingleQuery query={query} key={_id} />
       <p className="-mt-5 z-50">Recommendation Count: {recommendationCount}</p>
       <Link
