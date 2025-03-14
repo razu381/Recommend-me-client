@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Auth/AuthProvider";
 import axios from "axios";
 import Swal from "sweetalert2";
+import Divider from "../../components/Divider";
 
 function MyRecommendations() {
   let { user } = useContext(AuthContext);
@@ -52,10 +53,11 @@ function MyRecommendations() {
   }
 
   return (
-    <div className="lg:max-w-6xl mx-5 lg:mx-auto my-20 ">
-      <h2 className="font-bold text-2xl text-center py-10">
+    <div className="lg:max-w-6xl mx-5 lg:mx-auto my-5 ">
+      <h2 className="font-bold text-2xl lg:text-4xl text-center pt-10 text-california-600">
         My Recommendations
       </h2>
+      <Divider />
       <div className="overflow-x-auto">
         <table className="border-collapse border-spacing-4 border border-slate-200 table-auto w-full">
           <thead>
@@ -87,9 +89,9 @@ function MyRecommendations() {
                   <td className="border border-california-300 p-2">
                     <button
                       onClick={() => deleteRecommendation(_id)}
-                      className="bg-california-500 px-5 "
+                      className="bg-california-600 text-white py-1 px-5 "
                     >
-                      delete
+                      Delete
                     </button>
                   </td>
                 </tr>

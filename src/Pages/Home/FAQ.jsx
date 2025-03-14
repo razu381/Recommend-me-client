@@ -1,12 +1,14 @@
 import React from "react";
+import { FaThumbsUp } from "react-icons/fa";
+import Divider from "../../components/Divider";
 
 function FAQ() {
   return (
     <div>
-      <h2 className="font-bold text-3xl text-center py-10">
+      <h2 className="font-bold text-california-900 text-3xl text-center pt-10">
         Frquently asked questions
       </h2>
-
+      <Divider />
       <div className="space-y-4">
         <details
           className="group [&_summary::-webkit-details-marker]:hidden"

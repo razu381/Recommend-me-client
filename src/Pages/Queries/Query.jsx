@@ -71,7 +71,7 @@ function Query() {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:items-center md:gap-8">
           <div className="">
             <div className="max-w-lg md:max-w-none">
-              <h2 className="text-2xl font-semibold text-gray-900 sm:text-3xl">
+              <h2 className="text-2xl font-semibold text-california-600 sm:text-3xl">
                 {queryTitle}
               </h2>
 
@@ -97,7 +97,7 @@ function Query() {
         {/* start of recommendation section */}
         <div className="grid grid-cols-12 mt-20 gap-5">
           <div className="col-span-12 md:col-span-4">
-            <h2 className="text-2xl font-semibold text-gray-900 sm:text-3xl pb-5">
+            <h2 className="text-2xl font-semibold text-california-600 sm:text-3xl pb-5">
               Recommend Product
             </h2>
             <form
@@ -130,7 +130,7 @@ function Query() {
             </form>
           </div>
           <div className="col-span-12 md:col-span-8">
-            <h2 className="text-2xl font-semibold text-gray-900 sm:text-3xl pb-5">
+            <h2 className="text-2xl font-semibold text-california-600 sm:text-3xl pb-5">
               All Recommendations
             </h2>
             <div>

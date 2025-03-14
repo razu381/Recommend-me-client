@@ -2,6 +2,8 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Auth/AuthProvider";
 import axios from "axios";
 import RecommendationTable from "../../components/RecommendationTable";
+import { FaThumbsUp } from "react-icons/fa";
+import Divider from "../../components/Divider";
 
 function RecommendationsForMe() {
   let { user } = useContext(AuthContext);
@@ -14,19 +16,20 @@ function RecommendationsForMe() {
       .then((res) => setRecommendations(res.data))
       .then((err) => console.log(err));
   }, []);
-  if (recommendations.length === 0) {
-    return (
-      <h2 className="text-center font-bold text-2xl py-5">
-        There is no recommendatinos for you
-      </h2>
-    );
-  }
+
   return (
-    <div className="lg:max-w-6xl mx-5 lg:mx-auto my-20">
-      <h2 className="font-bold text-2xl text-center py-10">
+    <div className="lg:max-w-6xl mx-5 lg:mx-auto my-5 min-h-[800px]">
+      <h2 className="font-bold text-2xl lg:text-4xl text-center pt-10 text-california-600">
         Recommendations for me
       </h2>
-      <RecommendationTable recommendations={recommendations} />
+      <Divider />
+      {recommendations.length === 0 ? (
+        <h2 className="text-center font-bold text-2xl py-5">
+          There is no recommendatinos for you
+        </h2>
+      ) : (
+        <RecommendationTable recommendations={recommendations} />
+      )}
     </div>
   );
 }
